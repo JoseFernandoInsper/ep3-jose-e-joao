@@ -12,4 +12,9 @@ def verifica_gnhador():
     elif #O alinhado:
         return 2
         
+        
+        
+    #teste do xablau
+    #aqui é nois mulekada do kraio
+    
     
