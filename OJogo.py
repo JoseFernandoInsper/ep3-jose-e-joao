@@ -28,7 +28,8 @@ class jogo(object):
         return 1
     elif #O alinhado:
         return 2
-    
+        
+        
     def limpa_jogada():
         if verifica_ganhador==True:
             #transforma a matriz em uma matriz de zeros'''
