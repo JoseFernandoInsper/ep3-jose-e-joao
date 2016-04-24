@@ -14,7 +14,6 @@ def verifica_gnhador():
         
         
         
-    #teste do xablau
-    #aqui é nois mulekada do kraio
+  
     
     
