@@ -19,7 +19,7 @@ class jogo(object):
                 print("vez do O")            
     
 
-    def verifica_gnhador():
+    '''def verifica_gnhador():
         len matriz_jogo
     #verifica se há simbolos alinhados
         if #nenhum alinhado:
