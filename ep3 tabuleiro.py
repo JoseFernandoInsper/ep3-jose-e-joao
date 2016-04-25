@@ -78,7 +78,7 @@ class InterfaceJogo:
         
     
     def botao_1_clicado(self):
-        objjogo.recebe_jogada(matriz_jogo(0,1))
+        
         self.botao_1.configure(text="x", font= "Arial 35 bold", state="disabled")
         matriz_jogo[0,0] = 1
     
