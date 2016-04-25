@@ -8,19 +8,24 @@ class jogo(object):
             
     def recebe_jogada(self,linha,coluna):
 # Caso o jogador tente alterar a jogada anterior       
-       if (matriz_jogo[linha,coluna] != 0):
-          print("Jogada Invalida")
-          return 0
-           
-       else:    
-           matriz_jogo[linha,coluna]=self.jogador_atual       
-           if (self.jogador_atual == 1):
-               self.jogador_atual =2
-               print ("vez do x")
-           else:
+            
+        if (matriz_jogo[linha,coluna] != 0):
+            print("Jogada Invalida")
+            return 0
+        else: 
+            matriz_jogo[linha,coluna]=self.jogador_atual       
+            if (self.jogador_atual == 1):
+                self.jogador_atual =2
+                print ("vez do x")
+            else:
                 self.jogador_atual = 1
-                print("vez do O")            
+                print("vez do O")
+                
+                
     
+        
+
+            
 matriz_jogo = zeros([3,3])
 
 class InterfaceJogo:
@@ -76,6 +81,7 @@ class InterfaceJogo:
         self.visor.grid(row= 3, column= 0, columnspan=3, sticky="nwse")
         self.visor.configure(bg= "blue", text="jogador: "  ) 
         
+        
     
     def botao_1_clicado(self):
         objjogo.recebe_jogada(0,0)
@@ -128,9 +134,10 @@ class InterfaceJogo:
         print("botao_{0}_clicado".format(b))
         
         
-
+print(matriz_jogo[1,])
 
 objjogo = jogo()
 play = InterfaceJogo()
 play.iniciar()
 print(matriz_jogo)
+print(len(matriz_jogo))
