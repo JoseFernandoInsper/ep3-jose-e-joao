@@ -1,4 +1,5 @@
 from numpy import zeros
+
 class jogo(object):  
     def __init__(self):
         self.jogador_atual = 1
@@ -34,7 +35,6 @@ class jogo(object):
         if verifica_ganhador==True:
             #transforma a matriz em uma matriz de zeros'''
     
-
   
 matriz_jogo = zeros([3,3])
 
