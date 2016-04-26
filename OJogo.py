@@ -16,7 +16,7 @@ class jogo(object):
     
 
     '''def verifica_gnhador():
-        len matriz_jogo
+         matriz_jogo
     #verifica se há simbolos alinhados
         if #nenhum alinhado:
             return 0

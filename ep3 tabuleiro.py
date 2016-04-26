@@ -68,7 +68,7 @@ class InterfaceJogo:
         if self.objjogo.jogador_atual == 1 :
             self.botao_1.configure(text="X", font= "Arial 35 bold", state="disabled")
         else:
-            self.botao_1.configure(text="O", font= "Arial 35 bold", state="disabled")        
+            self.botao_1.configure(text="O", font= "Arial 35 bold", state="disabled")
         self.objjogo.recebe_jogada(0,0)
         
     def botao_2_clicado(self):
@@ -103,7 +103,7 @@ class InterfaceJogo:
         if self.objjogo.jogador_atual == 1 :
             self.botao_6.configure(text="X", font= "Arial 35 bold", state="disabled")
         else:
-            self.botao_6.configure(text="O", font= "Arial 35 bold", state="disabled")      
+            self.botao_6.configure(text="O", font= "Arial 35 bold", state="disabled")
         self.objjogo.recebe_jogada(1,2)
 
     def botao_7_clicado(self):
@@ -122,7 +122,7 @@ class InterfaceJogo:
 
     def botao_9_clicado(self):
         if self.objjogo.jogador_atual == 1 :
-            self.botao_9.configure(text="X", font= "Arial 35 bold", state="disabled")  
+            self.botao_9.configure(text="X", font= "Arial 35 bold", state="disabled")
         else :
             self.botao_9.configure(text="O", font= "Arial 35 bold", state="disabled")
         self.objjogo.recebe_jogada(2,2)
