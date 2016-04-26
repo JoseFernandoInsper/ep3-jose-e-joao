@@ -5,12 +5,7 @@ class jogo(object):
         self.jogador_atual = 1
             
     def recebe_jogada(self,linha,coluna):
-# Caso o jogador tente alterar a jogada anterior       
-       if (matriz_jogo[linha,coluna] != 0):
-          print("Jogada Invalida")
-          return 0
-           
-       else:    
+# Caso o jogador tente alterar a jogada anterior           
            matriz_jogo[linha,coluna]=self.jogador_atual       
            if (self.jogador_atual == 1):
                self.jogador_atual =2
@@ -42,15 +37,3 @@ objjogo = jogo()
 
 objjogo.recebe_jogada(0,1)
 print (matriz_jogo)
-
-objjogo.recebe_jogada(0,0)
-print(matriz_jogo)
-
-objjogo.recebe_jogada(0,0)
-print(matriz_jogo)
-
-objjogo.recebe_jogada(1,0)
-print(matriz_jogo)
-
-objjogo.recebe_jogada(2,2)
-print(matriz_jogo)
