@@ -85,47 +85,75 @@ class InterfaceJogo:
     
     def botao_1_clicado(self):
         objjogo.recebe_jogada(0,0)
-        self.botao_1.configure(text="x", font= "Arial 35 bold", state="disabled")        
+        if objjogo.recebe_jogada == 1 :
+            self.botao_1.configure(text="x", font= "Arial 35 bold", state="disabled")
+        else:
+            self.botao_1.configure(text="o", font= "Arial 35 bold", state="disabled")        
     
     def botao_2_clicado(self):
         objjogo.recebe_jogada(0,1)
         self.adicionar_jogada(2)
-        self.botao_2.configure(text="x", font= "Arial 35 bold", state="disabled")
+        if objjogo.recebe_jogada == 1 :
+            self.botao_2.configure(text="x", font= "Arial 35 bold", state="disabled")
+        else:
+            self.botao_2.configure(text="o", font= "Arial 35 bold", state="disabled")
         
     def botao_3_clicado(self):
         objjogo.recebe_jogada(0,2)
         self.adicionar_jogada(3)
-        self.botao_3.configure(text="x", font= "Arial 35 bold", state="disabled")
+        if objjogo.recebe_jogada == 1 :
+            self.botao_3.configure(text="x", font= "Arial 35 bold", state="disabled")
+        else:
+            self.botao_3.configure(text="o", font= "Arial 35 bold", state="disabled")
  
     def botao_4_clicado(self):
         objjogo.recebe_jogada(1,0)
         self.adicionar_jogada(4)
-        self.botao_4.configure(text="x", font= "Arial 35 bold", state="disabled")
+        if objjogo.recebe_jogada == 1 :
+            self.botao_4.configure(text="x", font= "Arial 35 bold", state="disabled")
+        else:
+            self.botao_4.configure(text="o", font= "Arial 35 bold", state="disabled")
     
     def botao_5_clicado(self):
         objjogo.recebe_jogada(1,1)
         self.adicionar_jogada(5)
-        self.botao_5.configure(text="x", font= "Arial 35 bold", state="disabled")
+        if objjogo.recebe_jogada == 1 :
+            self.botao_5.configure(text="x", font= "Arial 35 bold", state="disabled")
+        else:
+            self.botao_5.configure(text="o", font= "Arial 35 bold", state="disabled")
+        
         
     def botao_6_clicado(self):
         objjogo.recebe_jogada(1,2)
         self.adicionar_jogada(6)
-        self.botao_6.configure(text="x", font= "Arial 35 bold", state="disabled")
+        if objjogo.recebe_jogada == 1 :
+            self.botao_6.configure(text="x", font= "Arial 35 bold", state="disabled")
+        else:
+            self.botao_6.configure(text="o", font= "Arial 35 bold", state="disabled")      
         
     def botao_7_clicado(self):
         objjogo.recebe_jogada(2,0)
         self.adicionar_jogada(7)
-        self.botao_7.configure(text="x", font= "Arial 35 bold", state="disabled")
-        
+        if objjogo.recebe_jogada == 1:
+            self.botao_7.configure(text="x", font= "Arial 35 bold", state="disabled")
+        else:
+            self.botao_7.configure(text="o", font= "Arial 35 bold", state="disabled")
+    
     def botao_8_clicado(self):
         objjogo.recebe_jogada(2,1)
         self.adicionar_jogada(8)
-        self.botao_8.configure(text="x", font= "Arial 35 bold", state="disabled")
+        if objjogo.recebe_jogada == 1:
+            self.botao_8.configure(text="x", font= "Arial 35 bold", state="disabled")
+        else:
+            self.botao_8.configure(text="o", font= "Arial 35 bold", state="disabled")
         
     def botao_9_clicado(self):
         objjogo.recebe_jogada(2,2)
         self.adicionar_jogada(9)
-        self.botao_9.configure(text="x", font= "Arial 35 bold", state="disabled")        
+        if objjogo.recebe_jogada == 1 :
+            self.botao_9.configure(text="x", font= "Arial 35 bold", state="disabled")  
+        else :
+            self.botao_9.configure(text="o", font= "Arial 35 bold", state="disabled")
         
     def iniciar(self):
         self.tabuleiro.mainloop()
