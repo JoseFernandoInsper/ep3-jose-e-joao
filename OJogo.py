@@ -73,5 +73,5 @@ print (matriz_jogo)
 
 matriz_jogo
 objjogo.verifica_ganhador
-"""if sum(matriz_jogo.flat[:])==25:
-            print("Deu Velha!!!")"""   
+if sum(matriz_jogo.flat[:])==25:
+            print("Deu Velha!!!")   
