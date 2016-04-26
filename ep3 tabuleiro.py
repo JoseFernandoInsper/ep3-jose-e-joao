@@ -190,11 +190,9 @@ class InterfaceJogo:
         if resultado == 0:
             tkm.showinfo(title="Game Over", message = "Deu Velha")
         elif resultado == 1:
-            #vitoria X
-            pass
+            tkm.showinfo(title="Game Over", message = "X é o grande vencedor dessa batalha")
         elif resultado == 2:
-            #vitoria O
-            pass
+            tkm.showinfo(title="Game Over", message = "O é o grande vencedor dessa batalha")
         
 
     def iniciar(self):
