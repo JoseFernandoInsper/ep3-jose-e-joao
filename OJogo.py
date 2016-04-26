@@ -36,8 +36,12 @@ class jogo(object):
            self.matriz_jogo[0][0] == self.matriz_jogo[1][1] == self.matriz_jogo[2][2] == 2 or \
            self.matriz_jogo[0][2] == self.matriz_jogo[1][1] == self.matriz_jogo[2][0] == 2 :
                return 2
-        else:
-            pass
+        elif self.matriz_jogo[0][0] + self.matriz_jogo[0][1] + self.matriz_jogo[0][2] +  \
+           self.matriz_jogo[1][0] + self.matriz_jogo[1][1] + self.matriz_jogo[1][2] +  \
+           self.matriz_jogo[2][0] + self.matriz_jogo[2][1] + self.matriz_jogo[2][2] > 12 :
+               return 0
+               
+            
             
                     
 
