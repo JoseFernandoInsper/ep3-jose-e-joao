@@ -172,7 +172,7 @@ class InterfaceJogo:
         
         self.caixa_mensagem()
 
-    def botao_9_clicado(self):
+    def botao_9_clicado(self):     
         if self.objjogo.jogador_atual == 1 :
             self.botao_9.configure(text="X", font= "Arial 35 bold", state="disabled")
         else :

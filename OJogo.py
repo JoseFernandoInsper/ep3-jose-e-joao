@@ -9,7 +9,7 @@ class jogo(object):
           
            self.matriz_jogo[linha,coluna]=self.jogador_atual       
            if (self.jogador_atual == 1):
-               self.jogador_atual =5
+               self.jogador_atual =2
                print ("vez do x")
            else:
                 self.jogador_atual = 1
@@ -37,7 +37,8 @@ class jogo(object):
            self.matriz_jogo[0][2] == self.matriz_jogo[1][1] == self.matriz_jogo[2][0] == 2 :
                return 2
         else:
-            pass
+            return 0
+            
                     
 
 #        
