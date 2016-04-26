@@ -30,7 +30,7 @@ class InterfaceJogo:
         self.botao_2.grid(row= 0, column= 1, sticky= "nwse")
         
         self.botao_3 = tk.Button(self.tabuleiro)
-        self.botao_3.configure(bg="yellow", command=self.botao_3_clicado)        
+        self.botao_3.configure(bg="yellow", command=self.botao_3_clicado)
         self.botao_3.grid(row= 0, column= 2, sticky= "nwse")
         
         self.botao_4 = tk.Button(self.tabuleiro)
@@ -59,90 +59,77 @@ class InterfaceJogo:
         
         self.visor = tk.Label(self.tabuleiro)
         self.visor.grid(row= 3, column= 0, columnspan=3, sticky="nwse")
-        self.visor.configure(bg= "blue", text="jogador: "  ) 
-        
+        if self.objjogo.jogador_atual == 1 :
+            self.visor.configure(bg= "blue", text="jogador: Vez do X")
+        else:
+            self.visor.configure(bg= "blue", text="jogador: Vez do O")
         
     def botao_1_clicado(self):
         if self.objjogo.jogador_atual == 1 :
-            self.botao_1.configure(text="x", font= "Arial 35 bold", state="disabled")
+            self.botao_1.configure(text="X", font= "Arial 35 bold", state="disabled")
         else:
-            self.botao_1.configure(text="o", font= "Arial 35 bold", state="disabled")        
+            self.botao_1.configure(text="O", font= "Arial 35 bold", state="disabled")        
         self.objjogo.recebe_jogada(0,0)
         
     def botao_2_clicado(self):
         if self.objjogo.jogador_atual== 1 :
-            self.botao_2.configure(text="x", font= "Arial 35 bold", state="disabled")
+            self.botao_2.configure(text="X", font= "Arial 35 bold", state="disabled")
         else:
-            self.botao_2.configure(text="o", font= "Arial 35 bold", state="disabled")
+            self.botao_2.configure(text="O", font= "Arial 35 bold", state="disabled")
         self.objjogo.recebe_jogada(0,1)
     
     def botao_3_clicado(self):
         if self.objjogo.jogador_atual == 1 :
-            self.botao_3.configure(text="x", font= "Arial 35 bold", state="disabled")
+            self.botao_3.configure(text="X", font= "Arial 35 bold", state="disabled")
         else:
-            self.botao_3.configure(text="o", font= "Arial 35 bold", state="disabled")
+            self.botao_3.configure(text="O", font= "Arial 35 bold", state="disabled")
         self.objjogo.recebe_jogada(0,2)
 
     def botao_4_clicado(self):
         if self.objjogo.jogador_atual == 1 :
-            self.botao_4.configure(text="x", font= "Arial 35 bold", state="disabled")
+            self.botao_4.configure(text="X", font= "Arial 35 bold", state="disabled")
         else:
-            self.botao_4.configure(text="o", font= "Arial 35 bold", state="disabled")
+            self.botao_4.configure(text="O", font= "Arial 35 bold", state="disabled")
         self.objjogo.recebe_jogada(1,0)
 
     def botao_5_clicado(self):
         if self.objjogo.jogador_atual == 1 :
-            self.botao_5.configure(text="x", font= "Arial 35 bold", state="disabled")
+            self.botao_5.configure(text="X", font= "Arial 35 bold", state="disabled")
         else:
-            self.botao_5.configure(text="o", font= "Arial 35 bold", state="disabled")
+            self.botao_5.configure(text="O", font= "Arial 35 bold", state="disabled")
         self.objjogo.recebe_jogada(1,1)
 
     def botao_6_clicado(self):
         if self.objjogo.jogador_atual == 1 :
-            self.botao_6.configure(text="x", font= "Arial 35 bold", state="disabled")
+            self.botao_6.configure(text="X", font= "Arial 35 bold", state="disabled")
         else:
-            self.botao_6.configure(text="o", font= "Arial 35 bold", state="disabled")      
+            self.botao_6.configure(text="O", font= "Arial 35 bold", state="disabled")      
         self.objjogo.recebe_jogada(1,2)
 
     def botao_7_clicado(self):
         if self.objjogo.jogador_atual == 1:
-            self.botao_7.configure(text="x", font= "Arial 35 bold", state="disabled")
+            self.botao_7.configure(text="X", font= "Arial 35 bold", state="disabled")
         else:
-            self.botao_7.configure(text="o", font= "Arial 35 bold", state="disabled")
+            self.botao_7.configure(text="O", font= "Arial 35 bold", state="disabled")
         self.objjogo.recebe_jogada(2,0)
 
     def botao_8_clicado(self):
         if self.objjogo.jogador_atual == 1:
-            self.botao_8.configure(text="x", font= "Arial 35 bold", state="disabled")
+            self.botao_8.configure(text="X", font= "Arial 35 bold", state="disabled")
         else:
-            self.botao_8.configure(text="o", font= "Arial 35 bold", state="disabled")
+            self.botao_8.configure(text="O", font= "Arial 35 bold", state="disabled")
         self.objjogo.recebe_jogada(2,1)
 
     def botao_9_clicado(self):
         if self.objjogo.jogador_atual == 1 :
-            self.botao_9.configure(text="x", font= "Arial 35 bold", state="disabled")  
+            self.botao_9.configure(text="X", font= "Arial 35 bold", state="disabled")  
         else :
-            self.botao_9.configure(text="o", font= "Arial 35 bold", state="disabled")
+            self.botao_9.configure(text="O", font= "Arial 35 bold", state="disabled")
         self.objjogo.recebe_jogada(2,2)
 
     def iniciar(self):
         self.tabuleiro.mainloop()
-        
-    def adicionar_jogada(self, b):
-        print("botao_{0}_clicado".format(b))
-        
-        if (self.objjogo.jogador_atual == 1):
-               self.objjogo.jogador_atual =2
-               print ("vez do x")
-        else:
-                self.objjogo.jogador_atual = 1
-                print("vez do O")
-        
-        
-print(matriz_jogo)
 
 objjogo = jogo()
 play = InterfaceJogo()
 play.iniciar()
-print(matriz_jogo)
-print(len(matriz_jogo))

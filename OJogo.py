@@ -36,4 +36,4 @@ matriz_jogo = zeros([3,3])
 objjogo = jogo()
 
 objjogo.recebe_jogada(0,1)
-print (matriz_jogo)
+#print (matriz_jogo)
