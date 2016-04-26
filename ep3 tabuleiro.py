@@ -17,7 +17,7 @@ class InterfaceJogo:
         self.tabuleiro.columnconfigure(2, minsize=100)
                 
         self.botao_1 = tk.Button(self.tabuleiro)
-        self.botao_1.configure(bg="yellow", command=self.botao_1_clicado)
+        self.botao_1.configure(bg="green", command=self.botao_1_clicado)
         self.botao_1.grid(row= 0, column= 0, sticky= "nwse")
         
         self.botao_2 = tk.Button(self.tabuleiro)
@@ -25,7 +25,7 @@ class InterfaceJogo:
         self.botao_2.grid(row= 0, column= 1, sticky= "nwse")
         
         self.botao_3 = tk.Button(self.tabuleiro)
-        self.botao_3.configure(bg="yellow", command=self.botao_3_clicado)
+        self.botao_3.configure(bg="green", command=self.botao_3_clicado)
         self.botao_3.grid(row= 0, column= 2, sticky= "nwse")
         
         self.botao_4 = tk.Button(self.tabuleiro)
@@ -33,7 +33,7 @@ class InterfaceJogo:
         self.botao_4.grid(row= 1, column= 0, sticky= "nwse")
         
         self.botao_5 = tk.Button(self.tabuleiro)
-        self.botao_5.configure(bg="yellow", command=self.botao_5_clicado)
+        self.botao_5.configure(bg="blue", command=self.botao_5_clicado)
         self.botao_5.grid(row= 1, column= 1, sticky= "nwse")
         
         self.botao_6 = tk.Button(self.tabuleiro)
@@ -41,7 +41,7 @@ class InterfaceJogo:
         self.botao_6.grid(row= 1, column= 2, sticky= "nwse")
         
         self.botao_7 = tk.Button(self.tabuleiro)
-        self.botao_7.configure(bg="yellow", command=self.botao_7_clicado)
+        self.botao_7.configure(bg="green", command=self.botao_7_clicado)
         self.botao_7.grid(row= 2, column= 0, sticky= "nwse")
 
         self.botao_8 = tk.Button(self.tabuleiro)
@@ -49,7 +49,7 @@ class InterfaceJogo:
         self.botao_8.grid(row= 2, column= 1, sticky= "nwse")
         
         self.botao_9 = tk.Button(self.tabuleiro)
-        self.botao_9.configure(bg="yellow", command=self.botao_9_clicado)
+        self.botao_9.configure(bg="green", command=self.botao_9_clicado)
         self.botao_9.grid(row= 2, column= 2, sticky= "nwse")
         
         self.visor = tk.Label(self.tabuleiro)
