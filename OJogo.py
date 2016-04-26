@@ -15,7 +15,7 @@ class jogo(object):
                 print("vez do O")            
     
 
-    def verifica_ganhador(matriz_jogo):
+    def verifica_ganhador():
         if sum(matriz_jogo.flat[:])==25:
             print("Deu Velha")            
         
@@ -71,7 +71,7 @@ objjogo.recebe_jogada(2,2)
 #objjogo.verifica_ganhador
 print (matriz_jogo)
 
+matriz_jogo
 objjogo.verifica_ganhador
-
 """if sum(matriz_jogo.flat[:])==25:
             print("Deu Velha!!!")"""   
