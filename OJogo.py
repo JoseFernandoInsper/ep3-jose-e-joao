@@ -37,7 +37,7 @@ class jogo(object):
            self.matriz_jogo[0][2] == self.matriz_jogo[1][1] == self.matriz_jogo[2][0] == 2 :
                return 2
         else:
-            return 0
+            pass
             
                     
 
@@ -51,3 +51,6 @@ class jogo(object):
 #    '''def limpa_jogada():
 #        if verifica_ganhador==True:
 #            #transforma a matriz em uma matriz de zeros'''
+
+
+
