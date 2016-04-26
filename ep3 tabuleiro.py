@@ -1,15 +1,11 @@
 from OJogo import jogo
 import tkinter as tk
-from numpy import zeros
-
-
-matriz_jogo = zeros([3,3])
+import tkinter.messagebox as tkm
 
 class InterfaceJogo:
     def __init__(self):
         self.objjogo = jogo()
-        self.objjogo.jogador_atual == 1
-        self.objjogo.recebe_jogada
+        
         self.tabuleiro = tk.Tk()
         self.tabuleiro.geometry("300x320+540+200")
         self.tabuleiro.title("Jogo da Velha")
@@ -19,8 +15,7 @@ class InterfaceJogo:
         self.tabuleiro.columnconfigure(0, minsize=100)
         self.tabuleiro.columnconfigure(1, minsize=100)
         self.tabuleiro.columnconfigure(2, minsize=100)
-        
-        
+                
         self.botao_1 = tk.Button(self.tabuleiro)
         self.botao_1.configure(bg="yellow", command=self.botao_1_clicado)
         self.botao_1.grid(row= 0, column= 0, sticky= "nwse")
@@ -67,130 +62,143 @@ class InterfaceJogo:
     def botao_1_clicado(self):
         if self.objjogo.jogador_atual == 1 :
             self.botao_1.configure(text="X", font= "Arial 35 bold", state="disabled")
-            matriz_jogo[0,0] = 1
+            self.visor.configure(bg= "blue", text="jogador: Vez do O")
         else:
             self.botao_1.configure(text="O", font= "Arial 35 bold", state="disabled")
-            matriz_jogo[0,0] = 5
+            self.visor.configure(bg= "blue", text="jogador: Vez do X")
         self.objjogo.recebe_jogada(0,0)
         
-        if self.objjogo.jogador_atual == 1 :
-            self.visor.configure(bg= "blue", text="jogador: Vez do X")
-        else:
-            self.visor.configure(bg= "blue", text="jogador: Vez do O")
+        self.caixa_mensagem()
+        
+        
+        
         
     def botao_2_clicado(self):
         if self.objjogo.jogador_atual== 1 :
             self.botao_2.configure(text="X", font= "Arial 35 bold", state="disabled")
-            matriz_jogo[0,1] = 1
         else:
             self.botao_2.configure(text="O", font= "Arial 35 bold", state="disabled")
-            matriz_jogo[0,1] = 5
         self.objjogo.recebe_jogada(0,1)
         
         if self.objjogo.jogador_atual == 1 :
             self.visor.configure(bg= "blue", text="jogador: Vez do X")
         else:
             self.visor.configure(bg= "blue", text="jogador: Vez do O")
-    
+            
+        self.caixa_mensagem()
+       
     def botao_3_clicado(self):
         if self.objjogo.jogador_atual == 1 :
             self.botao_3.configure(text="X", font= "Arial 35 bold", state="disabled")
-            matriz_jogo[0,2] = 1
         else:
             self.botao_3.configure(text="O", font= "Arial 35 bold", state="disabled")
-            matriz_jogo[0,2] = 5
         self.objjogo.recebe_jogada(0,2)
         if self.objjogo.jogador_atual == 1 :
             self.visor.configure(bg= "blue", text="jogador: Vez do X")
-        else:
+        
+        else :
             self.visor.configure(bg= "blue", text="jogador: Vez do O")
-
+        
+        self.caixa_mensagem()
+        
+                        
+                
     def botao_4_clicado(self):
         if self.objjogo.jogador_atual == 1 :
             self.botao_4.configure(text="X", font= "Arial 35 bold", state="disabled")
-            matriz_jogo[1,0] = 1
         else:
             self.botao_4.configure(text="O", font= "Arial 35 bold", state="disabled")
-            matriz_jogo[1,0] = 5
         self.objjogo.recebe_jogada(1,0)
         if self.objjogo.jogador_atual == 1 :
             self.visor.configure(bg= "blue", text="jogador: Vez do X")
         else:
             self.visor.configure(bg= "blue", text="jogador: Vez do O")
+            
+        self.caixa_mensagem()
 
     def botao_5_clicado(self):
         if self.objjogo.jogador_atual == 1 :
             self.botao_5.configure(text="X", font= "Arial 35 bold", state="disabled")
-            matriz_jogo[1,1] = 1
         else:
             self.botao_5.configure(text="O", font= "Arial 35 bold", state="disabled")
-            matriz_jogo[1,1] = 5
         self.objjogo.recebe_jogada(1,1)
         
         if self.objjogo.jogador_atual == 1 :
             self.visor.configure(bg= "blue", text="jogador: Vez do X")
         else:
             self.visor.configure(bg= "blue", text="jogador: Vez do O")
+        
+        self.caixa_mensagem()
 
     def botao_6_clicado(self):
         if self.objjogo.jogador_atual == 1 :
             self.botao_6.configure(text="X", font= "Arial 35 bold", state="disabled")
-            matriz_jogo[1,2] = 1
         else:
             self.botao_6.configure(text="O", font= "Arial 35 bold", state="disabled")
-            matriz_jogo[1,2] = 5
         self.objjogo.recebe_jogada(1,2)
         
         if self.objjogo.jogador_atual == 1 :
             self.visor.configure(bg= "blue", text="jogador: Vez do X")
         else:
             self.visor.configure(bg= "blue", text="jogador: Vez do O")
+        
+        self.caixa_mensagem()
 
     def botao_7_clicado(self):
         if self.objjogo.jogador_atual == 1:
             self.botao_7.configure(text="X", font= "Arial 35 bold", state="disabled")
-            matriz_jogo[2,0] = 1
         else:
             self.botao_7.configure(text="O", font= "Arial 35 bold", state="disabled")
-            matriz_jogo[2,0] = 5
         self.objjogo.recebe_jogada(2,0)
         
         if self.objjogo.jogador_atual == 1 :
             self.visor.configure(bg= "blue", text="jogador: Vez do X")
         else:
             self.visor.configure(bg= "blue", text="jogador: Vez do O")
+        
+        self.caixa_mensagem()
 
     def botao_8_clicado(self):
         if self.objjogo.jogador_atual == 1:
             self.botao_8.configure(text="X", font= "Arial 35 bold", state="disabled")
-            matriz_jogo[2,1] = 1
         else:
             self.botao_8.configure(text="O", font= "Arial 35 bold", state="disabled")
-            matriz_jogo[2,1] = 5
         self.objjogo.recebe_jogada(2,1)
         
         if self.objjogo.jogador_atual == 1 :
             self.visor.configure(bg= "blue", text="jogador: Vez do X")
         else:
             self.visor.configure(bg= "blue", text="jogador: Vez do O")
+        
+        self.caixa_mensagem()
 
     def botao_9_clicado(self):
         if self.objjogo.jogador_atual == 1 :
             self.botao_9.configure(text="X", font= "Arial 35 bold", state="disabled")
-            matriz_jogo[2,2] = 1
         else :
             self.botao_9.configure(text="O", font= "Arial 35 bold", state="disabled")
-            matriz_jogo[2,2] = 5
         self.objjogo.recebe_jogada(2,2)
         if self.objjogo.jogador_atual == 1 :
             self.visor.configure(bg= "blue", text="jogador: Vez do X")
         else:
             self.visor.configure(bg= "blue", text="jogador: Vez do O")
+        
+        self.caixa_mensagem()
+            
+    def caixa_mensagem(self):
+        resultado = self.objjogo.verifica_ganhador()
+        if resultado == 0:
+            tkm.showinfo(title="Game Over", message = "Deu Velha")
+        elif resultado == 1:
+            #vitoria X
+            pass
+        elif resultado == 2:
+            #vitoria O
+            pass
+        
 
     def iniciar(self):
         self.tabuleiro.mainloop()
 
-objjogo = jogo()
 play = InterfaceJogo()
 play.iniciar()
-print(matriz_jogo)
