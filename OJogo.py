@@ -15,8 +15,8 @@ class jogo(object):
                 print("vez do O")            
     
 
-    '''def verifica_gnhador():
-         matriz_jogo
+    def verifica_gnhador():
+         if matriz_jogo 
     #verifica se há simbolos alinhados
         if #nenhum alinhado:
             return 0
@@ -28,7 +28,7 @@ class jogo(object):
         
     def limpa_jogada():
         if verifica_ganhador==True:
-            #transforma a matriz em uma matriz de zeros'''
+            #transforma a matriz em uma matriz de zeros
     
   
 matriz_jogo = zeros([3,3])
@@ -36,4 +36,4 @@ matriz_jogo = zeros([3,3])
 objjogo = jogo()
 
 objjogo.recebe_jogada(0,1)
-#print (matriz_jogo)
+print (matriz_jogo)
